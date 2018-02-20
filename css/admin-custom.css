@@ -1,0 +1,140 @@
+/*
+Theme Name: Damoon
+Theme URI: http://www.rayatarh.com/eshop
+Author: Rayatarh
+Author URI: http://www.rayatarh.com/
+Description: 2016 designed woocommerce theme 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: damoon
+*/
+
+@font-face {
+  font-family: 'BYekan';
+  src: url("../fonts/BYekan.eot?#") format("eot"), url("../fonts/BYekan.woff") format("woff"), url("../fonts/BYekan.ttf") format("truetype");
+  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+body {margin:0; font-family:BYekan !important;font-size:14px !important; background:#FFF;padding:0; margin:0;
+}
+a{ color: #666;
+    -webkit-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  -ms-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+a:hover, a:focus { color: #db4c52;
+  -webkit-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  -ms-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:BYekan !important}
+* {
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.mce-container {font-family: BYekan !important}
+
+.admin-bar-icon {min-width: 30px; min-height: 40px; background: url(../assets/img/admin/admin-bar.png) no-repeat;}
+#wpadminbar {
+      height: 50px !important;
+    background: #3C3C3C !important;
+    padding-top: 10px !important;
+    box-sizing: border-box !important;
+}
+
+#adminmenuwrap {
+  margin-top: 15px !important;
+}
+#adminmenu, #adminmenuback, #adminmenuwrap, #adminmenu .wp-submenu {background-color: #23C1CD !important;}
+.admin-bar-top-but, .admin-bar-top-but2 {
+  padding: 7px 40px 7px 15px !important;
+  background: #0aa699 url(../assets/img/admin/gear-icon.png) no-repeat 115px;
+  border-radius: 4px !important;
+  color: #FFF;
+  font-family: BYekan !important;
+}
+.admin-bar-top-but2 {background: #fc913a url(../assets/img/admin/design-icon.png) no-repeat 83px;}
+.admin-bar-top-but:hover {background-color: #4dc5bb !important }
+.admin-bar-top-but2:hover {background-color: #fd9b4b !important }
+
+#wp-admin-bar-user-info .avatar, #wp-admin-bar-user-info .avatar:hover ,#wpadminbar #wp-admin-bar-my-account.with-avatar > a img {border-radius: 50%; border: 2px solid #23C1CD;}
+#adminmenu li.menu-top:hover, #adminmenu li.opensub > a.menu-top, #adminmenu li > a.menu-top:focus {
+    color: #FFF !important;
+}
+#adminmenu .wp-submenu a:focus, #adminmenu .wp-submenu a:hover, #adminmenu a:hover {color: #000 !important;}
+#adminmenu li.menu-top > a:focus {color: #ddd !important;}
+#adminmenu .wp-submenu a {color: #FFF !important;}
+#adminmenu div.wp-menu-image::before {color: #515151;}
+#adminmenu .wp-has-current-submenu .wp-submenu, #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head, #adminmenu .wp-menu-arrow, #adminmenu .wp-menu-arrow div, #adminmenu li.current a.menu-top, #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu, .folded #adminmenu li.current.menu-top, .folded #adminmenu li.wp-has-current-submenu, #adminmenu .wp-menu-arrow div
+ {background: #198E96 !important}
+
+ #wpadminbar .ab-top-secondary .menupop .ab-sub-wrapper {
+    left: 5px !important;
+    border-radius: 0 0 10px 10px !important;
+    margin-top: 7px  !important;
+    background: #23C1CD  !important;
+    border: 2px solid #198E96  !important;
+    border-top: 0  !important;
+}
+ #wpadminbar .ab-top-secondary .menupop .ab-sub-wrapper a {color: #FFF !important}
+#wpadminbar .ab-top-secondary .menupop .ab-sub-wrapper a:hover {color: #198E96 !important}
+#wpbody-content {padding-top: 20px;}
+#adminmenu div.separator {height: 1px !important; width: 80%; margin: 0 auto; background: #34E0ED; position: relative;}
+#adminmenu div.separator:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #34E0ED;
+  position: absolute;
+  right: 0;
+  top:-4px;
+}
+.daily_widgets_price {margin-left: 0 !important; margin-right: 1.8em !important;}
+.daily_widgets_icon1_margin_left {margin-right: 0.5em !important; margin-left: 0 !important;}
+.daily_widgets_icon1 {margin-right: 0.36em !important; margin-left: 0 !important; }
+.cumm_header {padding: 7px !important;}
+.icon_cumm_widgets {margin-left: 10px;}
+#adminmenu .wp-submenu-head, #adminmenu a.menu-top {font-size: 13px !important}
+.side-custom-menu i {font-size: 18px; margin-right: -26px; margin-left: 10px; color: #555}
+.wp-menu-name:hover i  {color: #00B9EB}
+.wp-menu-name:hover .side-custom-menu {color: #FFF}
+.daily_widgets_icon i, .daily_widgets_icon_dashboard i {font-size: 32px}
+
+
+.iccommercepluginwrap .ic_block h2 {font-size: 17px !important; font-weight: normal !important;}
+.iccommercepluginwrap .ic_block-brown h2, .iccommercepluginwrap .ic_block-green h2, .iccommercepluginwrap .ic_block-orange h2,
+.iccommercepluginwrap .ic_block-purple h2, .iccommercepluginwrap .ic_block-blue h2, .iccommercepluginwrap .ic_block-light-green h2
+{text-shadow: none !important; color: unset !important}
+.iccommercepluginwrap .ic_block .ic_stat {color: unset !important; }
+.iccommercepluginwrap .ic_block {box-shadow: none !important;  border: 3px solid #e5e5e5; transition: all .4s ease-out 0s;}
+.iccommercepluginwrap .ic_block .fa {font-size: 40px}
+.iccommercepluginwrap .ic_block-light-green {background: transparent !important;color: #f86868 !important;}
+.iccommercepluginwrap .ic_block-light-green:hover {border-color: #f86868 !important }
+.iccommercepluginwrap .ic_block-brown {background: transparent !important;color: #AB8465 !important;}
+.iccommercepluginwrap .ic_block-brown:hover {border-color: #AB8465 !important }
+.iccommercepluginwrap .ic_block-green {background: transparent !important;color: #12B41F !important;}
+.iccommercepluginwrap .ic_block-green:hover {border-color: #12B41F !important }
+.iccommercepluginwrap .ic_block-orange {background: transparent !important;color: #f2ae43 !important;}
+.iccommercepluginwrap .ic_block-orange:hover {border-color: #f2ae43 !important }
+.iccommercepluginwrap .ic_block-purple {background: transparent !important;color: #847CC5 !important;}
+.iccommercepluginwrap .ic_block-purple:hover {border-color: #847CC5 !important }
+.iccommercepluginwrap .ic_block-blue {background: transparent !important;color: #12ADC2 !important;}
+.iccommercepluginwrap .ic_block-blue:hover {border-color: #12ADC2 !important }
+.jqplot-target {font-family: BYekan !important; font-size: 13px !important;}
+
+
+
+@media screen and (max-width: 600px){
+  .admin-bar-top-but, .admin-bar-top-but2 {height: 90px;}
+  #wpbody-content {padding-top: 50px;}
+}
+@media screen and (max-width: 320px){
+  .admin-bar-top-but2 {display: none;}
+}
