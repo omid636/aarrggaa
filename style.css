@@ -458,9 +458,9 @@ li.share-icon:hover .inner {
 .home-content .main .others .thumb { float: right; margin-left: 7px; }
 .home-content .main .others .thumb img {max-width: 104px; height: auto;}
 .home-content .main .others .title {font-weight: bold;}
-.home-content .main .others .title a {color: #666}
+.home-content .main .others .title a {color: #666666}
 .home-content .main .others .title a:hover {color: #38c5b3}
-.home-content .main .others .detail {color: #999}
+.home-content .main .others .detail {color: #999999}
 
 
 
