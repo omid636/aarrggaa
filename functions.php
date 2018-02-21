@@ -1,22 +1,22 @@
 <?php
-function last_article($atts){
-   $a = shortcode_atts( array(
-        'posts' => 1,
-    ), $atts );
-   $q = new WP_Query(array('orderby' => 'date', 'order' => 'DESC' , 'posts_per_page' => 1 , 'category__in' => $atts ));
-   if ($q->have_posts()) { 
-      while ($q->have_posts()) { 
-         $q->the_post();
-         $return_string .= '<div class="content"><div class="thumb">'.featured_image_thumb().'</div>';
-         $return_string .= '<h2><a href="'.get_permalink().'">'.get_the_title().'</a></h2>';
-         the_excerpt();
-         $return_string .= '<div class="detail"><div class="data"><span><i class="icon-user"></i>'.the_author().'</span><span><i class="icon-calendar"></i>'.the_time('j F  Y').'</span></div>';
-         $return_string .= '<div class="more"><a href="'.get_permalink().'">ادامه <i class="fa fa-arrow-left"></i></a> </div></div></div>';
-      }
-   }
-   wp_reset_postdata();
-   return $return_string;
-}
+// function last_article($atts){
+//    $a = shortcode_atts( array(
+//         'posts' => 1,
+//     ), $atts );
+//    $q = new WP_Query(array('orderby' => 'date', 'order' => 'DESC' , 'posts_per_page' => 1 , 'category__in' => $atts ));
+//    if ($q->have_posts()) { 
+//       while ($q->have_posts()) { 
+//          $q->the_post();
+//          $return_string .= '<div class="content"><div class="thumb">'.featured_image_thumb().'</div>';
+//          $return_string .= '<h2><a href="'.get_permalink().'">'.get_the_title().'</a></h2>';
+//          the_excerpt();
+//          $return_string .= '<div class="detail"><div class="data"><span><i class="icon-user"></i>'.the_author().'</span><span><i class="icon-calendar"></i>'.the_time('j F  Y').'</span></div>';
+//          $return_string .= '<div class="more"><a href="'.get_permalink().'">ادامه <i class="fa fa-arrow-left"></i></a> </div></div></div>';
+//       }
+//    }
+//    wp_reset_postdata();
+//    return $return_string;
+// }
 
 
 
@@ -97,7 +97,7 @@ function featured_image_thumb() {
 	}
 }
 
-$sidebars = array('header-ad','top-menu','top-ad','search-box','home-newsletter','footer-links1','footer-links2','footer-links3','category-sidebar','category-top','woocommerce_product_bot', 'blog-sidebar','mobile-bot-menu','mobile-menu');
+$sidebars = array('header-ad','top-menu','top-ad','left-side-ads','left-side-latest','right-side-ads','medic-box','bottom-ad','footer-latest','category-top','woocommerce_product_bot', 'blog-sidebar','mobile-bot-menu','mobile-menu');
 foreach($sidebars as $sb) {
 	register_sidebar(array('name'=> $sb,
 		'before_widget' => '<div class="menu_'.$sb.'">',

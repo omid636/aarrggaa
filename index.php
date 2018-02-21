@@ -48,7 +48,7 @@
 
           <li class="content">
             <div class="thumb">
-                <a class="slideimg" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                <a class="slideimg" href="<?php the_permalink(); ?>">
                 <?php echo featured_image_thumb(); ?>
                 </a>                      
             </div>
@@ -60,12 +60,8 @@
 
 <div class="row">
 	<div class="container home-content">
-		<div class="col-sm-2 right-col">
-			<div class="boxsh inner">
-				SSSSSSSSSS
-			</div>
-		</div>
-		<div class="col-sm-7 main">
+		
+		<div class="col-sm-7 col-sm-push-2 main">
 			<div class="boxsh inner hbox1">
 				<div class="row box-detail">
 					<div class="title"><span>سبک زندگی</span></div>
@@ -125,7 +121,27 @@
 				</div>
 				<div class="row">
 					<div class="col-sm-6 first">
-						<?php echo last_article(1); ?>
+						<?php $args = array(
+						'post_type' => 'post',
+						'category__in' => '1',
+						'posts_per_page' => 1,);
+						$arr_posts = new WP_Query( $args );
+						if ( $arr_posts->have_posts() ) : while ( $arr_posts->have_posts() ) :	$arr_posts->the_post();	?>
+
+				          <div class="content">
+				            <div class="thumb">
+				                <?php echo featured_image_thumb(); ?>                    
+				            </div>
+				              <h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+				              	<?php the_excerpt() ?>
+				              <div class="detail">
+				              	<div class="data"><span><i class="icon-user"></i> <?php the_author();?> </span> <span><i class="icon-calendar"></i> <?php the_time('j F  Y') ?> </span> </div>
+				              	<div class="more">
+				              		<a href="">ادامه <i class="fa fa-arrow-left"></i></a>
+				              	</div>
+				              </div>
+				          </div>
+				          <?php endwhile; endif; wp_reset_query(); ?>
 					</div>
 					<div class="col-sm-6 others">
 						<?php $args = array(
@@ -151,18 +167,71 @@
 				</div>
 			</div>
 			
-			<?php last_article(1); ?>
 		</div>
+		<div class="col-sm-2 col-sm-pull-7 right-col">
+			<div class="boxsh inner">
+				<?php if ( !function_exists('dynamic_sidebar')
+				|| !dynamic_sidebar('right-side-ads') ) : ?>
+				<?php endif; ?>
+			</div>
+			<div class="boxsh inner medic-box">
+				<?php if ( !function_exists('dynamic_sidebar')
+				|| !dynamic_sidebar('medic-box') ) : ?>
+				<?php endif; ?>
+			</div>
+		</div>
+
 		<div class="col-sm-3 left-col">
 		<div class="boxsh inner">
-			SSSSSSSSSSSS
+			<?php if ( !function_exists('dynamic_sidebar')
+			|| !dynamic_sidebar('left-side-ads') ) : ?>
+			<?php endif; ?>
+		</div>
+		<div class="boxsh inner">
+			<?php if ( !function_exists('dynamic_sidebar')
+			|| !dynamic_sidebar('left-side-latest') ) : ?>
+			<?php endif; ?>
 		</div>
 			
 		</div>
 	</div>
 </div>
+<div class="row">
+	<div class="container">
+		<div class="bottom-ad">
+			<?php if ( !function_exists('dynamic_sidebar')
+			|| !dynamic_sidebar('bottom-ad') ) : ?>
+			<?php endif; ?>
+		</div>
+	</div>
+</div>
 
+<div class="row week-top">
+<div class="title"><span>برگزیده هفته</span></div>
+	<ul class="content">
+      <?php $args = array(
+		'post_type' => 'post',
+		'category__in' => '1',
+		'posts_per_page' => 6,);
+		$arr_posts = new WP_Query( $args );
+		if ( $arr_posts->have_posts() ) : while ( $arr_posts->have_posts() ) :	$arr_posts->the_post();	?>
 
+          <li class="col-sm-2 inner">
+            <div class="thumb">
+            	<div class="image">
+                <a class="slideimg" href="<?php the_permalink(); ?>">
+                <?php echo featured_image_thumb(); ?>
+                </a>
+                <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3> 
+                 </div>
+                <div class="detail">
+				              	<div class="data row"><span class="user"><i class="icon-user"></i> <?php the_author();?> </span> <span class="calendar"><i class="icon-calendar"></i> <?php the_time('j F  Y') ?> </span> </div>
+				              </div>                    
+            </div>
+              
+          </li>
+          <?php endwhile; endif; wp_reset_query(); ?>
+        </ul>
+</div>
 
-<div class="row" style="height: 200px"></div>
 <?php get_footer(); ?>
