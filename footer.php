@@ -34,9 +34,18 @@
                   <?php endwhile; endif; wp_reset_query(); ?>
   </div>
   <div class="col-sm-3 footer-hot">
-    <?php if ( !function_exists('dynamic_sidebar')
-    || !dynamic_sidebar('footer-latest') ) : ?>
-    <?php endif; ?>
+    <div class="widget-title"><span class="wgt-span">مطالب داغ </span> </div>
+    <?php $args = array(
+            'post_type' => 'post',
+            'category__in' => '1',
+            'posts_per_page' =>8,);
+            $arr_posts = new WP_Query( $args );
+            if ( $arr_posts->have_posts() ) : while ( $arr_posts->have_posts() ) :  $arr_posts->the_post(); ?>
+
+                  <ul>
+                  <li><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></li>
+                  </ul>
+                  <?php endwhile; endif; wp_reset_query(); ?>
   </div>
   <div class="col-sm-3 footer-gallery"></div>
 </div>

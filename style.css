@@ -530,7 +530,7 @@ li.share-icon:hover .inner {
 .footer-latest .content {padding-bottom: 10px; margin-bottom: 10px;}
 .footer-latest a {color: #F0F0F0}
 .footer-latest a:hover {color: #38c5b3}
-
+.footer-latest, .footer-hot, .footer-gallery {padding-right: 5px; padding-left: 5px;}
 
 
 
