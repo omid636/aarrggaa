@@ -97,7 +97,7 @@ function featured_image_thumb() {
 	}
 }
 
-$sidebars = array('header-ad','top-menu','top-ad','left-side-ads','left-side-latest','right-side-ads','medic-box','bottom-ad','footer-latest','category-top','woocommerce_product_bot', 'blog-sidebar','mobile-bot-menu','mobile-menu');
+$sidebars = array('header-ad','top-menu','mobile-menu','mobile-bottom-menu','top-ad','left-side-ads','left-side-latest','right-side-ads','medic-box','bottom-ad','footer-latest','category-top','woocommerce_product_bot', 'blog-sidebar');
 foreach($sidebars as $sb) {
 	register_sidebar(array('name'=> $sb,
 		'before_widget' => '<div class="menu_'.$sb.'">',

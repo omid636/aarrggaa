@@ -6,7 +6,7 @@ if (!function_exists('propanel_of_options')) {
 function propanel_of_options(){
 
 //Theme Shortname
-$shortname = "zibazin";
+$shortname = "arga";
 
 
 //Populate the options array
@@ -61,13 +61,13 @@ $options[] = array( "name" => __('درباره قالب','framework_localize'),
 $options[] = array( "name" => __('درباره قالب','framework_localize'),
 			"desc" => "",
 			"id" => $shortname."_sample_callout",
-			"std" => "زیبازین یک قالب فروشگاهی ووکامرس می باشد که بر ارساس HTML5 ، CSS3 و Bootstrap طراحی شده است.
+			"std" => "آرگا یک قالب مجله ای وردپرس می باشد که بر ارساس HTML5 ، CSS3 و Bootstrap طراحی شده است.
 			<br>
-			نام قالب: زیبازین
+			نام قالب: مجله آرگا
 			<br>
-			آدرس اینترنتی: <a target='_blank' href='http://www.rayatarh.com'> www.rayatarh.com</a>
+			آدرس اینترنتی: <a target='_blank' href='http://arga-mag.com/'> arga-mag.com</a>
 			<br>
-			ورژن: 1 - شهریور 1396
+			ورژن: 1 - زمستان 1396
 			<br>
 			آدرس اینترنتی طراح: <a target='_blank' href='http://www.rayatarh.com'> www.rayatarh.com</a>
 			",
@@ -115,41 +115,189 @@ $options[] = array( "name" => __('گوگل آنالیتیک','framework_localize
 			"type" => "textarea");
 
 
-$options[] = array( "name" => __('اسلایدر صفحه اصلی','framework_localize'),
+$options[] = array( "name" => __('بخش ساختمان پزشکان','framework_localize'),
 			"type" => "heading");
 
 $options[] = array( 
-			"desc" => __('تصویر اسلایدر 1','framework_localize'),
-			"id" => $shortname."_slide1",
+			"desc" => __('تصویر پزشک 1','framework_localize'),
+			"id" => $shortname."_dr1_image",
 			"std" => "",
 			"type" => "upload");
 $options[] = array( 
-			"desc" => __('لینک اسلایدر 1','framework_localize'),
-			"id" => $shortname."_slide1link",
+			"desc" => __('نام پزشک 1','framework_localize'),
+			"id" => $shortname."_dr1_name",
+			"std" => "",
+			"type" => "text");
+$options[] = array( 
+			"desc" => __('لینک پزشک 1','framework_localize'),
+			"id" => $shortname."_dr1_link",
 			"std" => "",
 			"type" => "text");
 
+
 $options[] = array( 
-			"desc" => __('تصویر اسلایدر 2','framework_localize'),
-			"id" => $shortname."_slide2",
+			"desc" => __('تصویر پزشک 2','framework_localize'),
+			"id" => $shortname."_dr2_image",
 			"std" => "",
 			"type" => "upload");
 $options[] = array( 
-			"desc" => __('لینک اسلایدر 1','framework_localize'),
-			"id" => $shortname."_slide2link",
+			"desc" => __('نام پزشک 2','framework_localize'),
+			"id" => $shortname."_dr2_name",
+			"std" => "",
+			"type" => "text");
+$options[] = array( 
+			"desc" => __('لینک پزشک 2','framework_localize'),
+			"id" => $shortname."_dr2_link",
 			"std" => "",
 			"type" => "text");
 
+
 $options[] = array( 
-			"desc" => __('تصویر اسلایدر 3','framework_localize'),
-			"id" => $shortname."_slide3",
+			"desc" => __('تصویر پزشک 3','framework_localize'),
+			"id" => $shortname."_dr3_image",
 			"std" => "",
 			"type" => "upload");
 $options[] = array( 
-			"desc" => __('لینک اسلایدر 3','framework_localize'),
-			"id" => $shortname."_slide3link",
+			"desc" => __('نام پزشک 3','framework_localize'),
+			"id" => $shortname."_dr3_name",
 			"std" => "",
 			"type" => "text");
+$options[] = array( 
+			"desc" => __('لینک پزشک 3','framework_localize'),
+			"id" => $shortname."_dr3_link",
+			"std" => "",
+			"type" => "text");
+
+
+$options[] = array( 
+			"desc" => __('تصویر پزشک 4','framework_localize'),
+			"id" => $shortname."_dr4_image",
+			"std" => "",
+			"type" => "upload");
+$options[] = array( 
+			"desc" => __('نام پزشک 4','framework_localize'),
+			"id" => $shortname."_dr4_name",
+			"std" => "",
+			"type" => "text");
+$options[] = array( 
+			"desc" => __('لینک پزشک 4','framework_localize'),
+			"id" => $shortname."_dr4_link",
+			"std" => "",
+			"type" => "text");
+
+
+$options[] = array( 
+			"desc" => __('تصویر پزشک 5','framework_localize'),
+			"id" => $shortname."_dr5_image",
+			"std" => "",
+			"type" => "upload");
+$options[] = array( 
+			"desc" => __('نام پزشک 5','framework_localize'),
+			"id" => $shortname."_dr5_name",
+			"std" => "",
+			"type" => "text");
+$options[] = array( 
+			"desc" => __('لینک پزشک 5','framework_localize'),
+			"id" => $shortname."_dr5_link",
+			"std" => "",
+			"type" => "text");
+
+
+$options[] = array( 
+			"desc" => __('تصویر پزشک 6','framework_localize'),
+			"id" => $shortname."_dr6_image",
+			"std" => "",
+			"type" => "upload");
+$options[] = array( 
+			"desc" => __('نام پزشک 6','framework_localize'),
+			"id" => $shortname."_dr6_name",
+			"std" => "",
+			"type" => "text");
+$options[] = array( 
+			"desc" => __('لینک پزشک 6','framework_localize'),
+			"id" => $shortname."_dr6_link",
+			"std" => "",
+			"type" => "text");
+
+
+$options[] = array( 
+			"desc" => __('تصویر پزشک 7','framework_localize'),
+			"id" => $shortname."_dr7_image",
+			"std" => "",
+			"type" => "upload");
+$options[] = array( 
+			"desc" => __('نام پزشک 7','framework_localize'),
+			"id" => $shortname."_dr7_name",
+			"std" => "",
+			"type" => "text");
+$options[] = array( 
+			"desc" => __('لینک پزشک 7','framework_localize'),
+			"id" => $shortname."_dr7_link",
+			"std" => "",
+			"type" => "text");
+
+
+$options[] = array( 
+			"desc" => __('تصویر پزشک 8','framework_localize'),
+			"id" => $shortname."_dr8_image",
+			"std" => "",
+			"type" => "upload");
+$options[] = array( 
+			"desc" => __('نام پزشک 8','framework_localize'),
+			"id" => $shortname."_dr8_name",
+			"std" => "",
+			"type" => "text");
+$options[] = array( 
+			"desc" => __('لینک پزشک 8','framework_localize'),
+			"id" => $shortname."_dr8_link",
+			"std" => "",
+			"type" => "text");
+
+
+$options[] = array( 
+			"desc" => __('تصویر پزشک 9','framework_localize'),
+			"id" => $shortname."_dr9_image",
+			"std" => "",
+			"type" => "upload");
+$options[] = array( 
+			"desc" => __('نام پزشک 9','framework_localize'),
+			"id" => $shortname."_dr9_name",
+			"std" => "",
+			"type" => "text");
+$options[] = array( 
+			"desc" => __('لینک پزشک 9','framework_localize'),
+			"id" => $shortname."_dr9_link",
+			"std" => "",
+			"type" => "text");
+
+
+$options[] = array( 
+			"desc" => __('تصویر پزشک 10','framework_localize'),
+			"id" => $shortname."_dr10_image",
+			"std" => "",
+			"type" => "upload");
+$options[] = array( 
+			"desc" => __('نام پزشک 10','framework_localize'),
+			"id" => $shortname."_dr10_name",
+			"std" => "",
+			"type" => "text");
+$options[] = array( 
+			"desc" => __('لینک پزشک 10','framework_localize'),
+			"id" => $shortname."_dr10_link",
+			"std" => "",
+			"type" => "text");
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

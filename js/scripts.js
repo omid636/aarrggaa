@@ -20,7 +20,22 @@ $('.search-icon').click(function(){
 });
 
 
+$(".mobile-menu-btn").click(function(){
+    $('.mobile-menu-box').addClass('mobile-menu-open');
+    $('body').addClass('disable-scroll')
+});
+$(".menu-blank").click(function(){
+    $('.mobile-menu-box').removeClass('mobile-menu-open');
+    $('body').removeClass('disable-scroll')
+});
+  $(".menu_mobile-menu li.menu-item-has-children>a").click(function(event){
+    event.preventDefault();
+});
 
+  $('li.menu-item-has-children>a').click(function() {
+  $(this).parent().toggleClass('main-menu-open');
+  $(this).next().slideToggle(300);
+});
 
 
 

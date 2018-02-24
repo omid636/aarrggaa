@@ -18,6 +18,29 @@
 </head>
 
 <body>
+<div class="mobile-menu-box">
+    <div class="mobile-menu">
+        <div class="row mobile-logo">
+            <img src="<?php bloginfo('template_directory'); ?>/images/mobile-logo.png" alt="مجله ارگا" />
+        </div>
+        <div class="row cat">
+            دسته ها
+        </div>
+   
+<div class="top-mobile-menu">
+    <?php if ( !function_exists('dynamic_sidebar')
+        || !dynamic_sidebar('mobile-menu') ) : ?>
+        <?php endif; ?>
+    <div class="bot-links">
+      <?php if ( !function_exists('dynamic_sidebar')
+        || !dynamic_sidebar('mobile-bottom-menu') ) : ?>
+        <?php endif; ?>  
+    </div>
+</div>    
+    </div>
+    <div class="menu-blank"></div>
+</div>
+
 <div class="fix-search">
     <div class="fix-search-btn">
         <i class="fa fa-times"></i>
@@ -61,10 +84,9 @@
 
 <div class="row top-menu">
     <div class="container">
-        <div class="col-sm-1 home-icon">
-            <a href="http://arga-mag.com/"><i class="icon-home"></i></a>
-        </div>
-        <div class="col-sm-9 menu-top">
+        <div class="col-sm-10 menu-top">
+        <span class="icon-menu mobile-menu-btn"></span>
+        <span class="home-icon"><a href="http://arga-mag.com/"><i class="icon-home"></i></a></span>
             <?php if ( !function_exists('dynamic_sidebar')
             || !dynamic_sidebar('top-menu') ) : ?>
             <?php endif; ?>
