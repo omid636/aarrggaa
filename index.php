@@ -68,7 +68,7 @@
 					<a class="archive" href=""><i class="fa fa-plus"></i> آرشیو مطالب</a>
 				</div>
 				<div class="row">
-					<div class="col-sm-6 first">
+					<div class="row col-md-6 first">
 						<?php $args = array(
 						'post_type' => 'post',
 						'category__in' => '1',
@@ -91,7 +91,7 @@
 				          </div>
 				          <?php endwhile; endif; wp_reset_query(); ?>
 					</div>
-					<div class="col-sm-6 others">
+					<div class="col-md-6 others">
 						<?php $args = array(
 						'post_type' => 'post',
 						'category__in' => '1',
@@ -120,7 +120,7 @@
 					<a class="archive" href=""><i class="fa fa-plus"></i> آرشیو مطالب</a>
 				</div>
 				<div class="row">
-					<div class="col-sm-6 first">
+					<div class="row col-md-6 first">
 						<?php $args = array(
 						'post_type' => 'post',
 						'category__in' => '1',
@@ -143,7 +143,7 @@
 				          </div>
 				          <?php endwhile; endif; wp_reset_query(); ?>
 					</div>
-					<div class="col-sm-6 others">
+					<div class="col-md-6 others">
 						<?php $args = array(
 						'post_type' => 'post',
 						'category__in' => '1',
@@ -338,7 +338,7 @@
 		$arr_posts = new WP_Query( $args );
 		if ( $arr_posts->have_posts() ) : while ( $arr_posts->have_posts() ) :	$arr_posts->the_post();	?>
 
-          <li class="col-sm-2 inner">
+          <li class="col-md-2 col-sm-3 inner">
             <div class="thumb">
             	<div class="image">
                 <a class="slideimg" href="<?php the_permalink(); ?>">

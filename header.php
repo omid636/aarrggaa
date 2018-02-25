@@ -58,7 +58,7 @@
 
 <div class="row top-line">
     <div class="container">
-        <div class="col-sm-3 top-links">
+        <div class="col-sm-4 col-xs-6 top-links">
             <ul>
                 <li><a href="http://arga-mag.com/%d8%aa%d9%85%d8%a7%d8%b3-%d8%a8%d8%a7-%d9%85%d8%a7"><i class="icon-envelope"></i>تماس با ما</a></li>
                 <li><a href="http://arga-mag.com/%d9%be%d8%b0%db%8c%d8%b1%d8%b4-%d8%a2%da%af%d9%87%db%8c"><i class="fa fa-bullhorn"></i>تبلیغات</a></li>

@@ -1,6 +1,6 @@
 <div class="row footer">
 <div class="container main">
-  <div class="col-sm-3 footer-latest">
+  <div class="col-md-3 col-sm-4 footer-latest">
   <div class="widget-title"><span class="wgt-span">تازه های آرگا </span> </div>
     <?php $args = array(
             'post_type' => 'post',
@@ -16,7 +16,7 @@
                   </div>
                   <?php endwhile; endif; wp_reset_query(); ?>
   </div>
-  <div class="col-sm-3 footer-latest">
+  <div class="col-md-3 col-sm-4 footer-latest">
   <div class="widget-title"><span class="wgt-span">متخب سردبیر </span> </div>
     <?php $args = array(
             'post_type' => 'post',
@@ -33,7 +33,7 @@
                   </div>
                   <?php endwhile; endif; wp_reset_query(); ?>
   </div>
-  <div class="col-sm-3 footer-hot">
+  <div class="col-md-3 col-sm-4 footer-hot">
     <div class="widget-title"><span class="wgt-span">مطالب داغ </span> </div>
     <ul>
     <?php $args = array(
@@ -47,8 +47,8 @@
                   <?php endwhile; endif; wp_reset_query(); ?>
                   </ul>
   </div>
-  <div class="col-sm-3 footer-gallery">
-    <div class="widget-title"><span class="wgt-span">مطالب داغ </span> </div>
+  <div class="col-md-3 footer-gallery hide-sm">
+    <div class="widget-title"><span class="wgt-span">آخرین عکسهای گالری </span> </div>
     <ul>
     <?php $args = array(
             'post_type' => 'post',

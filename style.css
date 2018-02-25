@@ -267,6 +267,7 @@ position: relative;
     -ms-box-shadow: 1px 1px 5px rgba(0,0,0,0.15);
     -o-box-shadow: 1px 1px 5px rgba(0,0,0,0.15);
 }
+.header-ad img, .left-col img, .right-col img, .bottom-ad img {max-width: 100%; height: auto}
 .top-menu a {color: #222}
 .top-menu a:hover {color: #38c5b3}
 .home-icon {float: right; display: block; position: relative; z-index: 31; padding-top: 16px; font-size: 20px; margin-left: 20px;}
@@ -690,8 +691,10 @@ li.share-icon:hover .inner {
 .sardabir-slider li:hover a, .week-top .content li:hover a {color: #38c5b3}
 .home-sardabir .bx-wrapper .bx-viewport {box-shadow: none; -webkit-box-shadow:none ; border: none; left: 0; background: transparent;}
 .home-sardabir .bx-wrapper .bx-controls-direction a {width: 90px; height: 90px; top: 40%; border-radius: 100%}
-.home-sardabir .bx-wrapper .bx-next {background: #FFF url(css/images/controls.png) no-repeat -43px -32px; right: -50px;}
-.home-sardabir .bx-wrapper .bx-prev {background: #FFF url(css/images/controls.png) no-repeat 0 -32px; left: -50px; }
+.home-sardabir .bx-wrapper .bx-next {background: #FFF url(images/slide-nav.png) no-repeat -38px 37px; right: -50px; transition: all 0.3s;}
+.home-sardabir .bx-wrapper .bx-next:hover {background-position: -33px 37px}
+.home-sardabir .bx-wrapper .bx-prev {background: #FFF url(images/slide-nav.png) no-repeat 52px 37px; left: -50px; transition: all 0.3s; }
+.home-sardabir .bx-wrapper .bx-prev:hover {background-position: 47px 37px}
 .home-sardabir .bx-wrapper {overflow: hidden;}
 .home-content {padding: 0; margin-top: 25px; }
 .home-content .right-col {padding-right: 0; }
@@ -810,7 +813,7 @@ li.share-icon:hover .inner {
 /*-----------------------------------------------------------------------------*/
 /* 10 - FOOTER */
 /*-----------------------------------------------------------------------------*/
-.footer {background:url(images/footer-bg.jpg) no-repeat 0 -300px; background-size: cover; margin-top: 30px; padding-top: 20px;}
+.footer {background:url(images/footer-bg.jpg) no-repeat 0 -200px; background-size: cover; margin-top: 30px; padding-top: 20px;}
 .footer .main {padding-right: 0; padding-left: 0; border-bottom: 1px solid rgba(255,255,255,0.2)}
 .footer .widget-title .wgt-span {padding: 0;}
 .footer .widget-title .wgt-span:before {display: none;}
@@ -1115,30 +1118,49 @@ border-radius:5px;
 /*-----------------------------------------------------------------------------*/
 
 @media screen and (max-width: 1200px) {
-
+ .footer .main {width: 100%;}
 
 }
 
-@media screen and (min-width: 992px) (min-width: 1200px;) {
-  
+@media only screen and (max-width: 1200px) and (min-width: 992px) {
+  .footer .socials ul li {font-size: 25px}
+  .home-content .main .others .content:last-child {display: none;}
 }
 @media screen and (max-width: 1024px) {
   .menu_top-menu {display: none;}
 }
 @media screen and (max-width: 992px) { 
-  
+  .top-logo {padding-top: 10px;}
+  .top-logo img {max-width: 100%; height: auto}
+  .slidepost h3 {font-weight: normal; line-height: 1.2}
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .hide-sm {display:none;} 
+  .hide-sm {display: none;}
+  .hide-sm {display:none;}
+  .home-content .main .first {padding-bottom: 10px; border-bottom: 1px solid #f0f0f0;} 
+  .home-content .main .others {padding-top: 15px;}
+  .week-top .content li:nth-child(5), .week-top .content li:nth-child(6) {display: none;}
+  .footer .socials ul li {font-size: 18px}
 }
 
 @media screen and (max-width: 768px) {
 	.hide-xs {display: none;}
-	#back-top {display: none !important;} 
+	#back-top {display: none !important;}
+  .top-logo {text-align: center; margin-bottom: 3px;} 
+  .top-logo img {max-width: 100px; height: auto}
+  .top-line {margin-bottom: 0;}
+  .slidepost h3 {font-size: 14px}
+  .sardabir-slider li h3 {font-size: 16px; line-height: 1.4}
+  .home-content .main {width: 100%}
 
 }
+@media screen and (max-width: 570px) {
+  .slidepost:nth-child(1) {width: 100%}
+  .slidepost:nth-child(2), .slidepost:nth-child(3), .slidepost:nth-child(4), .slidepost:nth-child(5) {width: 50%}
+  .slidepost h3 {font-size: 18px} 
+}
 @media screen and (max-width: 480px) {
-  
+  .home-sardabir .title {font-size: 17px; width: 150px;}
 }
 @media screen and (max-width: 320px) {
   
