@@ -168,7 +168,7 @@
 			</div>
 			
 		</div>
-		<div class="col-sm-2 col-sm-pull-7 right-col">
+		<div class="col-sm-2 col-sm-pull-7 col-xs-5 right-col">
 			<div class="boxsh inner">
 				<?php if ( !function_exists('dynamic_sidebar')
 				|| !dynamic_sidebar('right-side-ads') ) : ?>
@@ -303,7 +303,7 @@
 			</div>
 		</div>
 
-		<div class="col-sm-3 left-col">
+		<div class="col-sm-3 col-xs-7 left-col">
 		<div class="boxsh inner">
 			<?php if ( !function_exists('dynamic_sidebar')
 			|| !dynamic_sidebar('left-side-ads') ) : ?>
@@ -338,7 +338,7 @@
 		$arr_posts = new WP_Query( $args );
 		if ( $arr_posts->have_posts() ) : while ( $arr_posts->have_posts() ) :	$arr_posts->the_post();	?>
 
-          <li class="col-md-2 col-sm-3 inner">
+          <li class="col-md-2 col-sm-3 col-xs-6 inner">
             <div class="thumb">
             	<div class="image">
                 <a class="slideimg" href="<?php the_permalink(); ?>">

@@ -28,13 +28,12 @@ $(".menu-blank").click(function(){
     $('.mobile-menu-box').removeClass('mobile-menu-open');
     $('body').removeClass('disable-scroll')
 });
-  $(".menu_mobile-menu li.menu-item-has-children>a").click(function(event){
-    event.preventDefault();
-});
 
-  $('li.menu-item-has-children>a').click(function() {
+$('.mobile-menu li.menu-item-has-children').append( '<span class="mob-menu-slide"></span>' );
+
+  $('.mob-menu-slide').click(function() {
   $(this).parent().toggleClass('main-menu-open');
-  $(this).next().slideToggle(300);
+  $(this).prev().slideToggle(300);
 });
 
 
