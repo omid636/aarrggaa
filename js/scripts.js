@@ -39,6 +39,12 @@ $('.mobile-menu li.menu-item-has-children').append( '<span class="mob-menu-slide
 
 
 
+      $(document).ready(function() {
+        $('.left-col, .right-col')
+          .theiaStickySidebar({
+            additionalMarginTop: 30
+          });
+      });
 
 
  $(window).scroll(function () {

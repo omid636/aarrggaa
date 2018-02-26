@@ -109,6 +109,23 @@
     </div>
 </div>
 
+<?php 
+if ( is_home() ) {
+    
+} else {
+  ?>
+  <div class="breadcrumb_wrapper">
+    <div class="container breadcrumbs">
+        <?php if(function_exists('bcn_display'))
+            {
+            bcn_display();
+        }?>
+    </div>
+  </div>
+<?php
+}
+ ?>
+
 <div class="row top-ad">
     <?php if ( !function_exists('dynamic_sidebar')
     || !dynamic_sidebar('top-ad') ) : ?>

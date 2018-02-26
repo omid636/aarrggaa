@@ -1,125 +1,82 @@
-<?php // Do not delete these lines
-	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
-		die ('Please do not load this page directly. Thanks!');
+<?php
+/**
+ * The template for displaying comments
+ *
+ * This is the template that displays the area of the page that contains both the current comments
+ * and the comment form.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package WordPress
+ * @subpackage Twenty_Seventeen
+ * @since 1.0
+ * @version 1.0
+ */
 
-	if (!empty($post->post_password)) { // if there's a password
-		if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {  // and it doesn't match the cookie
-			?>
-
-			<p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.','kubrick'); ?></p>
-
-			<?php
-			return;
-		}
-	}
-
-	/* This variable is for alternating comment background */
-	$oddcomment = 'class="alt" ';
+/*
+ * If the current post is protected by a password and
+ * the visitor has not yet entered the password we will
+ * return early without loading the comments.
+ */
+if ( post_password_required() ) {
+	return;
+}
 ?>
 
-<!-- You can start editing here. -->
+<div id="comments" class="comments-area">
 
-<div id="comment-top-bg"><span><?php comments_popup_link('0', '1 ', '% '); ?></span>
-دیدگاه برای این نوشته
-</div>
-
-
-<?php if ($comments) : ?>
-
-
-	<?php foreach ($comments as $comment) : ?>
-
-<div  class="comment">
-
-
-<?php if(function_exists('get_avatar')) { echo get_avatar($comment, '50'); } ?>
-<?php _e('','kubrick'); ?>
-
- <?php comment_author_link() ?>
-<?php if ($comment->comment_approved == '0') : ?>
-<?php _e('نظر منتظر تاييد مي باشد','kubrick'); ?>
-			<?php endif; ?>
-
-
-<small class="commentmetadata"><?php comment_date(__('j F , Y','kubrick')) ?> <?php _e(' در ','kubrick'); ?> <?php comment_time() ?> <?php edit_comment_link(__('ويرايش','kubrick'),'&nbsp;&nbsp;',''); ?></small>
-
-<?php comment_text() ?>
-
-</div>
 	<?php
-		/* Changes every other comment to a different class */
-		$oddcomment = ( empty( $oddcomment ) ) ? 'class="alt" ' : '';
-	
+	// You can start editing here -- including this comment!
+	if ( have_comments() ) : ?>
+		<h2 class="comments-title">
+			<?php
+			$comments_number = get_comments_number();
+			if ( '1' === $comments_number ) {
+				/* translators: %s: post title */
+				printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'twentyseventeen' ), get_the_title() );
+			} else {
+				printf(
+					/* translators: 1: number of comments, 2: post title */
+					_nx(
+						'%1$s Reply to &ldquo;%2$s&rdquo;',
+						'%1$s Replies to &ldquo;%2$s&rdquo;',
+						$comments_number,
+						'comments title',
+						'twentyseventeen'
+					),
+					number_format_i18n( $comments_number ),
+					get_the_title()
+				);
+			}
+			?>
+		</h2>
+
+		<ol class="comment-list">
+			<?php
+				wp_list_comments( array(
+					'avatar_size' => 100,
+					'style'       => 'ol',
+					'short_ping'  => true,
+					
+				) );
+			?>
+		</ol>
+
+		<?php the_comments_pagination( array(
+			'prev_text' => ( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous', 'twentyseventeen' ) . '</span>',
+			'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'twentyseventeen' ) . '</span>' . ( array( 'icon' => 'arrow-right' ) ),
+		) );
+
+	endif; // Check for have_comments().
+
+	// If comments are closed and there are comments, let's leave a little note, shall we?
+	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'twentyseventeen' ); ?></p>
+	<?php
+	endif;
+
+	comment_form();
 	?>
 
-
-	<?php endforeach; /* end for each comment */ ?>
-
-
- <?php else : // this is displayed if there are no comments so far ?>
-
-	<?php if ('open' == $post->comment_status) : ?>
-		<!-- If comments are open, but there are no comments. -->
-
-	 <?php else : // comments are closed ?>
-		<!-- If comments are closed. -->
-		<p class="nocomments">__(Comments are closed.,'kubrick')</p>
-
-	<?php endif; ?>
-<?php endif; ?>
-
-
-
-
-<?php if ('open' == $post->comment_status) : ?>
-
-
-
-
-<div   class="addcomment">ارسال یک دیدگاه</div>
-<div  class="main-center">
-
-<?php if ( get_option('comment_registration') && !$user_ID ) : ?>
-<p><?php _e('You must be','kubrick'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>"><?php _e('logged in','kubrick'); ?></a> <?php _e('to post a comment.','kubrick'); ?></p>
-<?php else : ?>
-
-<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
-
-<?php if ( $user_ID ) : ?>
-
-<p><?php _e('ورود با نام ','kubrick'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="<?php _e('خروج از اکانت','kubrick'); ?>"><?php _e('خروج','kubrick'); ?> &raquo;</a></p>
-
-<?php else : ?>
-
-<div class="comment-box-line"><input class="text-box" type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
-<label for="author"><span>نام</span></label>
-
-<input class="text-box" type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
-<label for="email"><span>ایمیل (ضروری)<?php if ($req) echo "<?php _e('(required)','kubrick'); ?>"; ?></span></label>
-
-<input class="text-box" type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-<label for="url"><span>وبسایت</span></label></div>
-
-<?php endif; ?>
-
-<!--<p><small><strong>XHTML:</strong> <?php _e('You can use these tags:','kubrick'); ?> <code><?php echo allowed_tags(); ?></code></small></p>-->
-
-
-<textarea class="input-comment" name="comment"  rows="1"  tabindex="4"></textarea>
-<br /><br />
-<input align="left" id="comment-button" name="submit" type="submit"  tabindex="5" value="<?php _e('ارسال دیدگاه','dnld'); ?>" />
-
-<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
-
-<?php do_action('comment_form', $post->ID); ?>
-
-</form>
-
-
-</div>
-<div class="bottom-center"></div>
-
-
-<?php endif; // If registration required and not logged in ?>
-
-<?php endif; // if you delete this the sky will fall on your head ?>
+</div><!-- #comments -->

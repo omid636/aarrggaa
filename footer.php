@@ -102,6 +102,7 @@
 <?php wp_footer(); ?>
 <script src="<?php bloginfo('template_directory'); ?>/js/scripts.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/wow.min.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/theia-sticky-sidebar.min.js" type="text/javascript"></script>
 
 <script>
 $(document).ready(function(){
