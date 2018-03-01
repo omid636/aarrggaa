@@ -81,7 +81,7 @@
 				                <?php echo featured_image_thumb(); ?>                    
 				            </div>
 				              <h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-				              	<?php the_excerpt() ?>
+				              	<?php echo get_excerpt(460); ?>
 				              <div class="detail">
 				              	<div class="data"><span><i class="icon-user"></i> <?php the_author();?> </span> <span><i class="icon-calendar"></i> <?php the_time('j F  Y') ?> </span> </div>
 				              	<div class="more">
@@ -133,7 +133,7 @@
 				                <?php echo featured_image_thumb(); ?>                    
 				            </div>
 				              <h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-				              	<?php the_excerpt() ?>
+				              	<?php echo get_excerpt(460); ?>
 				              <div class="detail">
 				              	<div class="data"><span><i class="icon-user"></i> <?php the_author();?> </span> <span><i class="icon-calendar"></i> <?php the_time('j F  Y') ?> </span> </div>
 				              	<div class="more">
@@ -180,7 +180,7 @@
 				<?php endif; ?>
 
 
-				<ul class="medic">
+				<!-- <ul class="medic">
 				<?php if( get_option('arga_dr1_image') ): ?>
 					<li>
 						<img src="<?php $dr1_image = get_option('arga_dr1_image'); echo $dr1_image; ?>" alt="<?php $dr1_name = get_option('arga_dr1_name'); echo $dr1_name; ?>">
@@ -295,7 +295,7 @@
 				<?php endif; ?>
 
 
-				</ul>
+				</ul> -->
 
 				<div>
 					

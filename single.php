@@ -135,7 +135,12 @@
 
 
 
+<div class="row">
+<div class="comment-open">
+  <span>مشاهده دیدگاه های این مطلب</span>
+</div>
 
+</div>
 
 
 <div class="col-xs-12 comments-template boxsh" id="comments">
@@ -158,124 +163,6 @@
         <?php if ( !function_exists('dynamic_sidebar')
         || !dynamic_sidebar('medic-box') ) : ?>
         <?php endif; ?>
-
-
-        <ul class="medic">
-        <?php if( get_option('arga_dr1_image') ): ?>
-          <li>
-            <img src="<?php $dr1_image = get_option('arga_dr1_image'); echo $dr1_image; ?>" alt="<?php $dr1_name = get_option('arga_dr1_name'); echo $dr1_name; ?>">
-            <span>
-              <a href="<?php $dr1_link = get_option('arga_dr1_link'); echo $dr1_link; ?>">
-                <?php $dr1_name = get_option('arga_dr1_name'); echo $dr1_name; ?>
-              </a>
-            </span>
-          </li>
-        <?php endif; ?>
-
-        <?php if( get_option('arga_dr2_image') ): ?>
-          <li>
-            <img src="<?php $dr2_image = get_option('arga_dr2_image'); echo $dr2_image; ?>" alt="<?php $dr2_name = get_option('arga_dr2_name'); echo $dr2_name; ?>">
-            <span>
-              <a href="<?php $dr2_link = get_option('arga_dr2_link'); echo $dr2_link; ?>">
-                <?php $dr2_name = get_option('arga_dr2_name'); echo $dr2_name; ?>
-              </a>
-            </span>
-          </li>
-        <?php endif; ?>
-
-        <?php if( get_option('arga_dr3_image') ): ?>
-          <li>
-            <img src="<?php $dr3_image = get_option('arga_dr3_image'); echo $dr3_image; ?>" alt="<?php $dr3_name = get_option('arga_dr3_name'); echo $dr3_name; ?>">
-            <span>
-              <a href="<?php $dr3_link = get_option('arga_dr3_link'); echo $dr3_link; ?>">
-                <?php $dr3_name = get_option('arga_dr3_name'); echo $dr3_name; ?>
-              </a>
-            </span>
-          </li>
-        <?php endif; ?>
-
-        <?php if( get_option('arga_dr4_image') ): ?>
-          <li>
-            <img src="<?php $dr4_image = get_option('arga_dr4_image'); echo $dr4_image; ?>" alt="<?php $dr4_name = get_option('arga_dr4_name'); echo $dr4_name; ?>">
-            <span>
-              <a href="<?php $dr4_link = get_option('arga_dr4_link'); echo $dr4_link; ?>">
-                <?php $dr4_name = get_option('arga_dr4_name'); echo $dr4_name; ?>
-              </a>
-            </span>
-          </li>
-        <?php endif; ?>
-
-        <?php if( get_option('arga_dr5_image') ): ?>
-          <li>
-            <img src="<?php $dr5_image = get_option('arga_dr5_image'); echo $dr5_image; ?>" alt="<?php $dr5_name = get_option('arga_dr5_name'); echo $dr5_name; ?>">
-            <span>
-              <a href="<?php $dr5_link = get_option('arga_dr5_link'); echo $dr5_link; ?>">
-                <?php $dr5_name = get_option('arga_dr5_name'); echo $dr5_name; ?>
-              </a>
-            </span>
-          </li>
-        <?php endif; ?>
-
-
-        <?php if( get_option('arga_dr6_image') ): ?>
-          <li>
-            <img src="<?php $dr6_image = get_option('arga_dr6_image'); echo $dr6_image; ?>" alt="<?php $dr6_name = get_option('arga_dr6_name'); echo $dr6_name; ?>">
-            <span>
-              <a href="<?php $dr6_link = get_option('arga_dr6_link'); echo $dr6_link; ?>">
-                <?php $dr6_name = get_option('arga_dr6_name'); echo $dr6_name; ?>
-              </a>
-            </span>
-          </li>
-        <?php endif; ?>
-
-
-        <?php if( get_option('arga_dr7_image') ): ?>
-          <li>
-            <img src="<?php $dr7_image = get_option('arga_dr7_image'); echo $dr7_image; ?>" alt="<?php $dr7_name = get_option('arga_dr7_name'); echo $dr7_name; ?>">
-            <span>
-              <a href="<?php $dr7_link = get_option('arga_dr7_link'); echo $dr7_link; ?>">
-                <?php $dr7_name = get_option('arga_dr7_name'); echo $dr7_name; ?>
-              </a>
-            </span>
-          </li>
-        <?php endif; ?>
-
-
-        <?php if( get_option('arga_dr8_image') ): ?>
-          <li>
-            <img src="<?php $dr8_image = get_option('arga_dr8_image'); echo $dr8_image; ?>" alt="<?php $dr8_name = get_option('arga_dr8_name'); echo $dr8_name; ?>">
-            <span>
-              <a href="<?php $dr8_link = get_option('arga_dr8_link'); echo $dr8_link; ?>">
-                <?php $dr8_name = get_option('arga_dr8_name'); echo $dr8_name; ?>
-              </a>
-            </span>
-          </li>
-        <?php endif; ?>
-
-        <?php if( get_option('arga_dr9_image') ): ?>
-          <li>
-            <img src="<?php $dr9_image = get_option('arga_dr9_image'); echo $dr9_image; ?>" alt="<?php $dr9_name = get_option('arga_dr9_name'); echo $dr9_name; ?>">
-            <span>
-              <a href="<?php $dr9_link = get_option('arga_dr9_link'); echo $dr9_link; ?>">
-                <?php $dr9_name = get_option('arga_dr9_name'); echo $dr9_name; ?>
-              </a>
-            </span>
-          </li>
-        <?php endif; ?>
-
-        <?php if( get_option('arga_dr10_image') ): ?>
-          <li>
-            <img src="<?php $dr10_image = get_option('arga_dr10_image'); echo $dr10_image; ?>" alt="<?php $dr10_name = get_option('arga_dr10_name'); echo $dr10_name; ?>">
-            <span>
-              <a href="<?php $dr10_link = get_option('arga_dr10_link'); echo $dr10_link; ?>">
-                <?php $dr10_name = get_option('arga_dr10_name'); echo $dr10_name; ?>
-              </a>
-            </span>
-          </li>
-        <?php endif; ?>
-
-
-        </ul>
 
         <div>
           

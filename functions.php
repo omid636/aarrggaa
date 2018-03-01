@@ -46,15 +46,15 @@ require_once(TEMPLATEPATH . '/admin/admin-functions.php');
 require_once(TEMPLATEPATH . '/admin/admin-interface.php');
 require_once(TEMPLATEPATH . '/admin/theme-settings.php');
 
-function new_excerpt_length($length) {
-    return 35;
+function get_excerpt( $count ) {
+$permalink = get_permalink($post->ID);
+$excerpt = get_the_content();
+$excerpt = strip_tags($excerpt);
+$excerpt = substr($excerpt, 0, $count);
+$excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+$excerpt = '<p>'.$excerpt.' ...</p>';
+return $excerpt;
 }
-add_filter('excerpt_length', 'new_excerpt_length');
-
-function new_excerpt_more($more) {
-    return ' ... ';
-}
-add_filter('excerpt_more', 'new_excerpt_more');
 
 
 

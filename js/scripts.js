@@ -36,6 +36,11 @@ $('.mobile-menu li.menu-item-has-children').append( '<span class="mob-menu-slide
   $(this).prev().slideToggle(300);
 });
 
+$(".comment-open span").click(function(){
+    $('.comments-template').slideDown(300);
+    $('.comment-open').hide();
+});
+
 
 
 
